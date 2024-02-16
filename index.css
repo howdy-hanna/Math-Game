@@ -1,0 +1,55 @@
+/*index.css*/
+body {
+  background-color: rgb(171, 202, 246);
+}
+
+h2 {
+  margin-top: 50px;
+  text-decoration: wavy underline rgb(1, 21, 110);
+  text-underline-offset: 20px;
+  color:  rgb(1, 21, 110);
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+  
+h3, p, h1, h4 {
+  text-align: center;
+}
+
+.clock {
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color:  rgb(226, 53, 0);
+}
+
+p {
+  text-decoration: wavy underline rgb(1, 21, 110);
+  text-underline-offset: 15px;
+  font-size: 17px;
+  color: rgb(1, 21, 110);
+  font-weight: 325;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color:  rgb(226, 53, 0);
+}
+
+input {
+  display: block;
+  margin: auto;
+}
+
+h4 {
+  color: rgb(1, 21, 110);
+  font-weight: 325;
+}
