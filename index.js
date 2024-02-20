@@ -3,6 +3,7 @@ $(document).ready(function(){
   var interval;
   var timeLeft = 10;
   var score = 0;
+  var highScore = 0;
 
   var updateTimeLeft = function (amount) {
     timeLeft += amount;
@@ -13,6 +14,13 @@ $(document).ready(function(){
     score += amount;
     $('#score').text(score);
   };
+
+  var updateHighScore = function (amount) {
+    if (score > highScore) {
+      highScore = score;
+      $('#highscore').text(highScore);
+    }
+  }
 
   var startGame = function () {
     if (!interval) {
@@ -57,6 +65,7 @@ $(document).ready(function(){
       $('#user-input').val('');
       updateTimeLeft(+1);
       updateScore(+1);
+      updateHighScore('');
     }
   }
 
