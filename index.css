@@ -15,7 +15,7 @@ h2 {
   margin-bottom: 50px;
 }
   
-h3, p, h1, h4 {
+h3, p, h1, h4, .secleft {
   text-align: center;
 }
 
@@ -29,7 +29,7 @@ h3 {
   color:  rgb(226, 53, 0);
 }
 
-p {
+.secleft {
   text-decoration: wavy underline rgb(1, 21, 110);
   text-underline-offset: 15px;
   font-size: 17px;
@@ -48,6 +48,30 @@ input {
   display: block;
   margin: auto;
   border: 2px solid rgb(226, 53, 0);
+}
+
+.limit {
+  margin-top: 15px;
+  font-size: 17px;
+  color: rgb(1, 21, 110);
+  font-weight: 325;
+}
+
+#numlim {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color:  rgb(226, 53, 0);
+  font-size: 25px;
+}
+
+#numberlimit {
+  width: 15rem;
+  margin-bottom: 23px;
+}
+
+.score {
+  text-decoration: wavy overline rgb(1, 21, 110);
+  padding-bottom: 15px;
 }
 
 h4 {

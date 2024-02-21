@@ -4,6 +4,7 @@ $(document).ready(function(){
   var timeLeft = 10;
   var score = 0;
   var highScore = 0;
+  var numberLimet = 10;
 
   var updateTimeLeft = function (amount) {
     timeLeft += amount;
@@ -38,14 +39,19 @@ $(document).ready(function(){
     }
   }
 
+  var updateNumberLimit = function(limit) {
+    numberLimet = limit;
+    $('#numlim').text(numberLimet);
+  }
+
   var randomNumberGenerator = function (size) {
     return Math.ceil(Math.random() * size);
   }
   
   var questionGenerator = function () {
     var question = {};
-    var num1 = randomNumberGenerator(10);
-    var num2 = randomNumberGenerator(10);
+    var num1 = randomNumberGenerator(numberLimet);
+    var num2 = randomNumberGenerator(numberLimet);
     
     question.answer = num1 + num2;
     question.equation = String(num1) + " + " + String(num2);
@@ -72,6 +78,14 @@ $(document).ready(function(){
 $('#user-input').on('keyup', function () {
   startGame();
   checkAnswer(Number($(this).val()), currentQuestion.answer);
+});
+
+$('#numberlimit').on('change', function (e) {
+    limit = Number($(this).val());
+    updateNumberLimit(limit);
+    renderNewQuestion();
+  // get the value and update the numberLimet variable
+  // should correct your spelling on numberLimet
 });
   
   renderNewQuestion();
